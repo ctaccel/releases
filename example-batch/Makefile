@@ -8,8 +8,8 @@ BOOST_ROOT = /usr/accel/boost
 INCS += -I $(BOOST_ROOT)/include
 LIBS += -L $(BOOST_ROOT)/lib64 -lboost_system-mt -lboost_filesystem-mt
 
-default: main.cpp
-		g++ -std=c++11 -O3 -fopenmp $(INCS) main.cpp $(LIBS) -o $(TARGET)
+default: ops.cpp main.cpp
+		g++ -O3 -fopenmp $(INCS) ops.cpp main.cpp $(LIBS) -o $(TARGET)
 
 .PHONY: clean
 clean:
